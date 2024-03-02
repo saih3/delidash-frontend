@@ -1,0 +1,70 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# self added below
+
+# Node Modules
+node_modules/
+
+# Build/compiled files
+dist/
+build/
+
+# Logs and temporary files
+*.log
+*.pid
+*.lock
+
+# IDE/Text editor files
+.vscode/
+.idea/
+*.sublime-project
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# User-specific configuration files
+.eslintrc.local
+.gitconfig.local
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Vite cache
+.cache/
+
+# Tailwind CSS build output
+tailwind.config.js
+postcss.config.js
+
+# Build artifacts for Vite
+build/
+
+# Vite logs
+logs/
+
