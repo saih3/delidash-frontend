@@ -26,6 +26,8 @@ dist-ssr
 
 # self added below
 
+.env
+
 # Node Modules
 node_modules/
 
