@@ -1,14 +1,13 @@
-import { useCreateMyUser } from "@/api/MyUserApi";
 import { AppState, Auth0Provider, User } from "@auth0/auth0-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function Auth0ProviderWithNavigate({ children }: Props) {
-  const { createUser } = useCreateMyUser();
-
+  const navigate = useNavigate();
   const domain = import.meta.env.VITE_AUTH0_DOMAIN;
   const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
   const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URL;
@@ -19,10 +18,7 @@ export default function Auth0ProviderWithNavigate({ children }: Props) {
 
   const onRedirectCallBack = (appState?: AppState, user?: User) => {
     console.log("User", user);
-
-    if (user?.sub && user?.email) {
-      createUser({ auth0Id: user.sub, email: user.email });
-    }
+    navigate("/auth-callback");
   };
 
   return (
@@ -37,6 +33,4 @@ export default function Auth0ProviderWithNavigate({ children }: Props) {
       {children}
     </Auth0Provider>
   );
-
-  return <div>Auth0ProviderWithNavigate</div>;
 }
