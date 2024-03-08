@@ -13,6 +13,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import LoadingButton from "@/components/LoadingButton";
+import { User } from "@/types";
+import { useEffect } from "react";
 
 const formSchema = z.object({
   email: z.string().optional(),
@@ -25,15 +27,28 @@ const formSchema = z.object({
 type UserFormData = z.infer<typeof formSchema>;
 
 type Props = {
+  currentUser: User;
   onSave: (userProfileDate: UserFormData) => void;
   isLoading: boolean;
 };
 
-export default function UserProfileForm({ isLoading, onSave }: Props) {
+export default function UserProfileForm({
+  isLoading,
+  onSave,
+  currentUser,
+}: Props) {
   // initializing react hook library
   const form = useForm<UserFormData>({
     resolver: zodResolver(formSchema),
+    defaultValues: currentUser,
   });
+
+  // if we receive new updated user info, the page updates
+  // if currentUser changes, it will reset form and reload the page
+  useEffect(() => {
+    form.reset(currentUser);
+  }, [currentUser, form]);
+
   return (
     <Form {...form}>
       <form
