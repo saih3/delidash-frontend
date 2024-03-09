@@ -23,13 +23,9 @@ const AppRoutes = () => {
         <Route
           path="/user-profile"
           element={
-            <span>
-              {
-                <Layout>
-                  <UserProfilePage />
-                </Layout>
-              }
-            </span>
+            <Layout>
+              <UserProfilePage />
+            </Layout>
           }
         />
       </Route>
