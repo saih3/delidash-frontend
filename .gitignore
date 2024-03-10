@@ -25,48 +25,47 @@ dist-ssr
 
 
 # self added below
-
 .env
 
-# Node Modules
-node_modules/
+# # Node Modules
+# node_modules/
 
-# Build/compiled files
-dist/
-build/
+# # Build/compiled files
+# dist/
+# build/
 
-# Logs and temporary files
-*.log
-*.pid
-*.lock
+# # Logs and temporary files
+# *.log
+# *.pid
+# *.lock
 
-# IDE/Text editor files
-.vscode/
-.idea/
-*.sublime-project
+# # IDE/Text editor files
+# .vscode/
+# .idea/
+# *.sublime-project
 
-# Operating system files
-.DS_Store
-Thumbs.db
+# # Operating system files
+# .DS_Store
+# Thumbs.db
 
-# User-specific configuration files
-.eslintrc.local
-.gitconfig.local
+# # User-specific configuration files
+# .eslintrc.local
+# .gitconfig.local
 
-# Dependency lock files
-yarn.lock
-package-lock.json
+# # Dependency lock files
+# yarn.lock
+# package-lock.json
 
-# Vite cache
-.cache/
+# # Vite cache
+# .cache/
 
-# Tailwind CSS build output
-tailwind.config.js
-postcss.config.js
+# # Tailwind CSS build output
+# tailwind.config.js
+# postcss.config.js
 
-# Build artifacts for Vite
-build/
+# # Build artifacts for Vite
+# build/
 
-# Vite logs
-logs/
+# # Vite logs
+# logs/
 
