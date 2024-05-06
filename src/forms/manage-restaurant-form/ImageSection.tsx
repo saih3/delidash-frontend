@@ -10,7 +10,7 @@ import { useFormContext } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 
 export default function ImageSection() {
-  const { control, watch } = useFormContext();
+  const { control } = useFormContext();
   //   const existingImageUrl = watch("imageUrl");
 
   return (
